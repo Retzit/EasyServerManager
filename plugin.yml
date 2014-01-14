@@ -1,0 +1,4 @@
+name: EasyServerManager
+main: net.retzit.esm.Main
+authors: [ItsJustBjarn, HiFiGamer]
+version: 1.0
