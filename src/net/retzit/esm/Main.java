@@ -29,12 +29,14 @@ public class Main extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		getLogger().info("Trying to start EasyServermanager!");
-		getLogger().info("EasyServerManager succesfully started!");
+		getLogger().info("EasyServerManager succesfully Enabled!");
 		getLogger().info("Thank you for using our plugin.");
 	}
 	
 	@Override
 	public void onDisable() {
-		getLogger().info("");
+		getLogger().info("Trying to stop EasyServermanager!");
+		getLogger().info("EasyServerManager succesfully Disabled!");
+		getLogger().info("Thank you for using our plugin.");
 	}
 }
