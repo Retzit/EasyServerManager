@@ -1,4 +1,36 @@
 name: EasyServerManager
 main: net.retzit.esm.Main
-authors: [ItsJustBjarn, HiFiGamer]
-version: 1.0
+version: 0.0.1-ALPHA
+author: Retzit
+
+commands:
+    esm:
+        description: Main command
+        usage: /esm
+    easyservermanager:
+        description: Main command
+        usage: /easyservermanager
+    fly:
+        description: Toggle fly for <player>
+        usage: /fly [name]
+    speed:
+        description: Toggle speed for <player>
+        usage: /fly <speed> [name]
+    heal:
+        description: Heals <player>
+        usage: /heal [name]
+    feed:
+        description: Feed <player>
+        usage: /feed [name]
+    vanish:
+        description: Vanish <player>
+        usage: /vanish [name]
+    gm:
+        description: Change current gamemode
+        usage: /gm <gamemode> [name]
+    broadcast:
+        description: Broadcast message
+        usage: /broadcast <message>
+    bc:
+        description: Broadcast message
+        usage: /bc <message>

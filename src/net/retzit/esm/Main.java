@@ -1,42 +1,42 @@
 package net.retzit.esm;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.HashMap;
-import java.util.logging.Logger;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import net.retzit.esm.commands.BroadcastCommand;
+import net.retzit.esm.commands.EasyServerManagerCommand;
+import net.retzit.esm.commands.FeedCommand;
+import net.retzit.esm.commands.FlyCommand;
+import net.retzit.esm.commands.GamemodeCommand;
+import net.retzit.esm.commands.HealCommand;
+import net.retzit.esm.commands.VanishCommand;
 
 import org.bukkit.ChatColor;
-import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
-	public static final int BUKKIT_VERSION = 2957;
 	public final PluginDescriptionFile pdf = this.getDescription();
-    public static YamlConfiguration LANG;
-    public static File LANG_FILE;
+    
 	
 	@Override
 	public void onEnable() {
 		getLogger().info("Trying to start EasyServermanager!");
-		getLogger().info("EasyServerManager succesfully Enabled!");
+		getLogger().info("EasyServerManager succesfully started!");
 		getLogger().info("Thank you for using our plugin.");
+		
+
+		getCommand("easyservermanager").setExecutor(new EasyServerManagerCommand());
+		getCommand("esm").setExecutor(new EasyServerManagerCommand());
+		getCommand("fly").setExecutor(new FlyCommand());
+		getCommand("heal").setExecutor(new HealCommand());
+		getCommand("feed").setExecutor(new FeedCommand());
+		getCommand("gm").setExecutor(new GamemodeCommand());
+		getCommand("vanish").setExecutor(new VanishCommand());
+		getCommand("broadcast").setExecutor(new BroadcastCommand());
+		getCommand("bc").setExecutor(new BroadcastCommand());
 	}
 	
 	@Override
 	public void onDisable() {
-		getLogger().info("Trying to stop EasyServermanager!");
-		getLogger().info("EasyServerManager succesfully Disabled!");
+		getLogger().info("EasyServerManager succesfully stopped!");
 		getLogger().info("Thank you for using our plugin.");
 	}
 }
